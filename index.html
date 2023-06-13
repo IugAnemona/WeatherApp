@@ -1,47 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/style/styles.css" />
-    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://openweathermap.org/img/wn/04n.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
   </head>
   <body>
-    <main class="main-content">
-        <div class="search">
-
-            <input class="input-city" placeholder="Digite o nome da cidade" />
-            <button class="button">
-                <img
-                class="img-button"
-                src="https://www.svgrepo.com/show/488200/find.svg"
-                alt=""
-                />
-            </button>
-        </div>
-
-      <div class="api-content">
-        <h2 class="city">Tempo em São Paulo</h2>
-
-        <p class="temp">21°C</p>
-
-        <div class="weather-content">
-          <img class="img-preview"
-            src="https://openweathermap.org/img/wn/04n.png"
-            alt="icone-info-tempo"
-          />
-          <p class="weather">Nublado</p>
-        </div>
-        <p class="umidade">Umidade: 76%</p>
-      </div>
-    </main>
-    <script src="./assets/scripts/scripts.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
