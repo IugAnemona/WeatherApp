@@ -1,15 +1,15 @@
 <script setup>
-import { onBeforeMount, ref } from "vue";
-const emits = defineEmits(["dadosRecebidos"]);
+import { ref } from "vue";
 
-const key = "c00312569905dbd2b055e77b0421fed7";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 const dados = ref(0);
 const hasData = ref(false);
 
 async function findCity(city) {
+  // console.log(key);
   const data = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=pt_br&units=metric`
   ).then((response) => response.json());
   dados.value = {
     city: data.name,
@@ -40,10 +40,7 @@ const city = ref("");
   </div>
   <div class="text-center mt-7 flex font-Ubuntu">
     <div class="mx-auto">
-      <h2
-        @click="() => console.log(dadosRecebidos)"
-        class="text-gray-100 text-5xl font-light my-10"
-      >
+      <h2 class="text-gray-100 text-5xl font-light my-10">
         {{ hasData ? "Tempo em " + dados.city : "Tempo em Belo Horizonte" }}
       </h2>
 
