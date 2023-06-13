@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const apiKey = import.meta.env.VITE_API_KEY;
+const apiKey = process.env.API_KEY;
 
 const dados = ref(0);
 const hasData = ref(false);
