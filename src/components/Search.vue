@@ -1,15 +1,13 @@
 <script setup>
 import { ref } from "vue";
 
-const apiKey = process.env.API_KEY;
-
 const dados = ref(0);
 const hasData = ref(false);
 
 async function findCity(city) {
   // console.log(key);
   const data = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=pt_br&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${"c00312569905dbd2b055e77b0421fed7"}&lang=pt_br&units=metric`
   ).then((response) => response.json());
   dados.value = {
     city: data.name,
